@@ -1,0 +1,119 @@
+/*----------------------------------*/
+/*   _base.scss  (body, p, a, etc)  */
+/*----------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+@import url($font-url--Opensans);
+@import url($font-url--Montserrat);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    text-align: center;
+    font-family: $font-family--Opensans;
+    color: $body-text-color;
+    background: $page-color;
+}
+
+  
+
+h1 {
+    font-family: $font-family--Montserrat;
+    font-weight: $Montserrat-weight-medium;
+    font-size: 1.75em;
+    letter-spacing: 3px;
+    color: $h1-text-color;
+    margin-top: 100px;
+
+    @media #{$brk-tablet} {
+	font-size: 3em;
+    }
+
+    
+
+    @media #{$brk-desktop} {
+	font-size: 4em;
+    }
+}
+
+h2 {
+    font-size: 1.65em;
+    line-height: 1.0;
+    text-transform: uppercase;
+    color: $h2-text-color;
+
+    @media #{$brk-tablet} {
+	font-size: 2em;
+    }
+
+    @media #{$brk-desktop} {
+	font-size: 2em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+    }
+}
+
+h2.survey {
+    margin-bottom: -7px;
+
+    @media #{$brk-tablet} {
+	margin-bottom: -15px;
+    }
+
+    @media #{$brk-desktop} {
+	margin-bottom: -35px;
+    }
+}
+
+/* Banner - H2 */
+header h2 {
+    font-family: $font-family--Montserrat;
+    font-weight: $Montserrat-weight-regular;
+    font-size: 1.25em;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    line-height: 1.0;
+    margin-top: -20px;
+
+    @media #{$brk-desktop} {
+	font-size: 2em;
+    }
+}
+
+/* Tour Date H2 */
+.tourdates {
+    letter-spacing: 3px;
+}
+
+
+
+/* Link Styles */
+a {
+    text-decoration: none;
+    color: $href-color;
+
+    &:hover {
+	color: $href-hover-color;
+    }
+}
+
+/* Purchase Album - Button */
+.buy {
+    margin-top: 25px;
+    padding: 5px;
+    background: $h2-text-color;
+    color: $white;
+
+    &:hover,
+    &:focus {
+	font-weight: $Opensans-weight-semibold;
+    	background: $card-border;
+	border: 4px $h2-text-color solid;
+	transition: all 0.3s ease-in-out;
+    }
+}
+

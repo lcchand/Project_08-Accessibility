@@ -1,0 +1,296 @@
+/*-------------------------------*/
+/*   _containers.scss            */
+/*-------------------------------*/
+
+
+/* Navigation */
+.main-nav {
+  width: 100%;
+  background: $main-nav-color;
+  min-height: 30px;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: $Opensans-weight-semibold; //700
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+
+  @media #{$brk-desktop} {
+    max-width: 1200px;
+    padding: 0 30px;
+  }
+
+  .name {
+    display: block;
+    margin-right: auto;
+    letter-spacing: 2px;
+  }
+
+  li {
+    padding: 5px 10px 10px 10px;
+  }
+
+  a {
+      transition: all .5s;
+      font-weight: $Opensans-weight-regular;
+
+      &:hover,
+      &:focus {
+	  color: $white;
+	  font-weight: $Opensans-weight-semibold;
+      }
+  }
+}
+
+.tag {
+  color: black;
+  padding: 10px;
+  letter-spacing: 5px;
+}
+
+.name {
+  font-weight: $Opensans-weight-light;//300
+}
+
+.tagline {
+    font-weight: $Opensans-weight-semibold; //600
+  padding: 20px;
+  text-transform: uppercase;
+  color: #781125
+}
+
+.card {
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+    border-top: 4px solid #781125;
+    clear: both;
+
+    @media #{$brk-tablet} {
+	margin: 30px;
+	margin-top: 20px; //new
+	padding: 20px 40px 40px;
+    }
+
+    @media #{$brk-desktop} {
+	margin: 40px auto;
+	padding: 20px 20px 40px 20px;
+	width: 80%;
+	//max-width: 1000px;
+    }
+
+    &:hover {
+	border-color: $card-border;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+	transition: all 0.5s ease-in-out;
+    }
+
+}
+
+.flex {
+    
+    @media #{$brk-desktop} {
+	display: -ms-flexbox; /* TWEENER - IE 10 */
+	display: flex;
+	max-width: 1200px;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+    }
+}
+
+/* Table for Tour Dates */
+// Header for Tour Dates with Pick Images
+.tourhead {
+  width: 100%;
+  text-align: center;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.information {
+  width: 100%;
+  text-align: center;
+  flex: 1 1 0px;//new
+     
+  @media #{$brk-desktop} {
+      text-align: left;
+  }
+}
+
+
+// Tour Dates
+
+// Global
+table {
+    margin-top: 23px;
+    margin: 0 auto;
+    border-collapse: collapse;   
+}
+
+th, td {
+    vertical-align: top;
+    padding: 5px 15px 5px 5px;
+    
+    @media #{$brk-tablet} {
+	vertical-align: middle;
+	 padding-right: 25px;
+    }
+
+    @media #{$brk-desktop} {
+	vertical-align: middle;
+	 padding-right: 50px;
+    }
+}
+
+
+
+table caption {
+    display: none;
+}
+//Table Heading
+tr.thead>th {
+    text-transform: uppercase;
+    font-size: 1.125em;
+    letter-spacing: 1px;
+    font-weight: $Opensans-weight-semibold;
+    border-bottom: 4px solid $h1-text-color;
+    padding-bottom: 5px;
+    
+}
+// First Column
+tr th:nth-child(1) {
+    @media #{$brk-mobile} {
+	padding-right: 20px;
+    }
+    @media #{$brk-tablet} {
+	padding-right: 60px;
+    }
+}
+
+tr:nth-of-type(even) {
+    background-color: $card-table-row;
+}
+
+tr:hover {
+    background-color: $href-color;
+    color: $white;
+			 
+}
+
+/* Survey Page */
+//Form Globals
+form {
+  margin: 0 auto;
+  text-align: left;
+  display: block;
+
+  @media #{$brk-tablet} {
+      width: 75%;
+  }
+
+  @media #{$brk-desktop} {
+      width: 100%;
+  }
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+}
+
+fieldset {
+  border: none;
+  padding-left: 0;
+}
+
+// Survey & Newsletter attributes
+
+#hint-email,
+#hint-verifyemail,
+#hint-submit {
+  display: none;
+}
+
+#newsletter input:focus,
+textarea:focus {
+    background: rgba(0,0,0,.1);
+}
+
+button, input, email, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+select, textarea {
+    width: 100%;
+
+    @media #{$brk-tablet} {
+	width: 75%;
+    }
+
+    @media #{$brk-desktop} {
+	width: 100%;
+    }
+
+    
+}
+
+textarea {
+    width: 98%;
+}
+
+
+
+
+/* Newsletter Form */
+
+#newsletter {
+    text-align: right;
+}
+
+#newsletter fieldset {
+    margin: 16px 0 0 0;
+}
+
+#newsletter legend {
+    display: none;
+}
+
+
+#newsletter input[type='text'],
+#newsletter input[type='email'] {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 5px 8px;
+    font-size: 1em;
+    
+
+    @media #{$brk-tablet} {
+	width: 75%;
+    }
+
+    @media #{$brk-desktop} {
+	width: 63%;
+    }
+}
+
+#newsletter label {
+    display: block;
+    margin-bottom: 5px;
+
+    @media #{$brk-tablet} {
+	display: inline-block;
+	margin-bottom: 0;
+    }
+}
+

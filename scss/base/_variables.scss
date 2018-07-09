@@ -1,0 +1,53 @@
+/*-------------------------------*/
+/*   _variables.scss             */
+/*-------------------------------*/
+
+// Descriptive Color Variables
+
+$body-text-color  : rgb(33, 33, 33); //#3A6355;
+$card-border      : #96731A;
+$card-table-row   : #f0ddab;
+$page-color       : #fdf8e1;
+$h1-text-color    : #000;
+$h2-text-color    : #781125;
+$href-color       : #b3b3b3;
+$href-hover-color : $page-color;
+$main-nav-color   : rgba(45, 43, 48, 0.9);
+//$main-nav-color   : rgb(45, 43, 48);
+$white            : rgb(255, 255, 255);
+
+
+
+
+// Font Stacks
+
+$font-url--Opensans         : 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600';
+$font-url--Montserrat       : 'https://fonts.googleapis.com/css?family=Montserrat:400,500';
+
+$font-family--Opensans      : 'Open Sans', sans-serif;
+$font-family--Montserrat    : 'Montserrat', sans-serif;
+
+
+
+// Font Weights
+
+$Opensans-weight-light      : 300;
+$Opensans-weight-regular    : 400;
+$Opensans-weight-semibold   : 600;
+
+$Montserrat-weight-regular  : 400;
+$Montserrat-weight-medium   : 500;
+
+
+
+//Asset Paths
+
+$path-img         : 'img';
+
+
+// Media query Breakpoints
+
+$brk-mobile       : '(min-width: 480px)';//414px
+$brk-tablet       : '(min-width: 768px)';
+$brk-desktop      : '(min-width: 840px)';
+
